@@ -29,6 +29,7 @@ const GroupedTable = ({ data }: Data) => {
       {
         header: "Location",
         accessorKey: "location",
+        filterFn: "contains",
       },
       {
         header: "Rarity",

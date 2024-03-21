@@ -18,13 +18,13 @@ const Relict = (relictData: RelictType) => {
 
       <div className={styles.rowContainer}>
         <div>
-          <h3>Locations</h3>
+          <h3>Lokacje</h3>
           <div className={styles.locationTable}>
             <LocationTable data={relictData.locations} />
           </div>
         </div>
         <div>
-          <h3>Rewards</h3>
+          <h3>Nagrody</h3>
           <div className={styles.rewardsTable}>
             <RewardsTable data={relictData.rewards} />
           </div>

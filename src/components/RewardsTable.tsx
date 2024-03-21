@@ -20,17 +20,17 @@ const RewardsTable = ({ data }: Data) => {
     () => [
       {
         accessorKey: "item.name", //access nested data with dot notation
-        header: "Name",
+        header: "Nazwa",
         size: 150,
       },
       {
         accessorKey: "rarity", //normal accessorKey
-        header: "Rarity",
+        header: "Rzadkość",
         size: 200,
       },
       {
         accessorKey: "chance",
-        header: "Drop Chance",
+        header: "Szansa dropu",
         size: 150,
       },
     ],

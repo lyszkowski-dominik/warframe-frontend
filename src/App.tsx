@@ -25,7 +25,7 @@ function App() {
     <>
       <h1>Warframe Relics</h1>
       <div className="card">
-        <h2>Currently available relics: </h2>
+        <h2>Obecnie dostępne relikty: </h2>
         <div className="relics">
           {currentlyAvailableRelics.map((relic: RelictType) => (
             <Relict key={`${relic.name}.${uniqid()}`} {...relic} />

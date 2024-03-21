@@ -25,4 +25,5 @@ export type Relict = {
   rewards: Reward[];
   type: string;
   vaulted: boolean;
+  columnName: string;
 };

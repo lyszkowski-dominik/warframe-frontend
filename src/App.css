@@ -1,9 +1,11 @@
 body {
+ 
   background-color: #202020;
   color: #fff;
 }
 #root {
   /* max-width: 1280px; */
+
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -21,4 +23,17 @@ body {
   border: 1px solid #000;
   border-radius: 15px;
   background-color: #5f5849;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 0;
+    width: 100%;
+  }
+  .relics {
+    padding: 1rem;
+  }
+  .card{
+    padding: 0;
+  }
 }

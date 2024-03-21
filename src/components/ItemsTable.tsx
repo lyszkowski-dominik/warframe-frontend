@@ -32,6 +32,7 @@ const ItemsTable = ({ data }: Props) => {
       },
       {
         accessorFn: (row) => row.drops.join(", "),
+        filterFn: "contains",
         header: "Drops",
         size: 200,
       },

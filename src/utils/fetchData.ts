@@ -23,6 +23,8 @@ const transformRelics = (uniqueRelics: any) => {
       }
       if (!relic.vaulted) {
         newObj[name].drops.push(relic.name);
+      } else {
+        newObj[name].drops.push(`${relic.name} (vaulted)`);
       }
     });
   });

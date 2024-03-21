@@ -66,7 +66,6 @@ export const fetchData = async () => {
     });
   // iterate through uniqueRelics and its rewards and create new object with only property 'name' that comes from reward.item.name 'chance' and 'rarity' from reward
   const rewards = transformRelics(uniqueRelics);
-  console.log(rewards);
   // create additional objects based on locations count copying rest of the attributes
   const allRelics = uniqueRelics
     .flatMap((relic: any) => {

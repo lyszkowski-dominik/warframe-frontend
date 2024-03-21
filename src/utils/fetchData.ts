@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchData = async () => {
   const response = await axios.get(
-    "https://api.warframestat.us/items?only=name,type,rewards,vaulted,locations,imageName,uniqueName"
+    "https://api.warframestat.us/items?only=name,type,rewards,vaulted,locations,imageName,uniqueName?language=pl"
   );
 
   // filter only for category relics

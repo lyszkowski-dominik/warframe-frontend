@@ -24,6 +24,7 @@ const GroupedTable = ({ data }: Data) => {
       {
         header: "Rewards",
         accessorKey: "rewardsArray",
+        filterFn: "contains",
       },
       {
         header: "Location",
@@ -46,6 +47,7 @@ const GroupedTable = ({ data }: Data) => {
     data,
     enableGrouping: true,
     initialState: {
+      showColumnFilters: true,
       grouping: ["columnName", "name", "rewardsArray"],
       pagination: { pageIndex: 0, pageSize: 20 },
     },

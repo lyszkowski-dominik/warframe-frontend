@@ -17,6 +17,7 @@ const ItemsTable = ({ data }: Props) => {
       {
         accessorKey: "name", //access nested data with dot notation
         header: "Name",
+        filterFn: "contains",
         size: 150,
       },
       {
@@ -42,6 +43,7 @@ const ItemsTable = ({ data }: Props) => {
     columns,
     data,
     initialState: {
+      showColumnFilters: true,
       sorting: [
         {
           id: "name",

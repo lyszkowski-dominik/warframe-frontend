@@ -13,6 +13,7 @@
     width: 100%;
     height: auto;
   }
+  margin-left: 1rem;
 }
 
 .table {
@@ -57,6 +58,10 @@
       align-items: center;
       gap: 2rem;
     }
+ 
+  }
+  .description {
+    padding: 1rem;
   }
 
   .dropTable {

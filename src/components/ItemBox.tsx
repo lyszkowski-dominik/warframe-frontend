@@ -14,7 +14,7 @@ const ItemBox = ({ data }: Props) => {
      
       <div className={styles.itemBox}>
         <h2>{data.name}</h2>
-        <p>{data.description}</p>
+        <p className={styles.description}>{data.description}</p>
         <div className={styles.table}>
         <div className={styles.imageBox}>
         <img

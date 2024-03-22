@@ -31,7 +31,12 @@ const ItemBox = ({ data }: Props) => {
             <tbody>
               {data.components.map((component) => (
                 <tr key={uniqid()}>
-                  <td>{component.name}</td>
+                  <td className={styles.imgCell}>
+                    {component.name}{" "}
+                    <img
+                      src={`https://cdn.warframestat.us/img/${component.imageName}`}
+                    ></img>
+                  </td>
                   <td>{component.itemCount}</td>
                 </tr>
               ))}
@@ -81,10 +86,13 @@ const ItemBox = ({ data }: Props) => {
                 </tr>
               </thead>
               {data.components.map((component) => {
+                const imgSrc = `https://cdn.warframestat.us/img/${component.imageName}`;
                 return component.drops.map((drop) => (
                   <tbody key={uniqid()}>
                     <tr>
-                      <td>{component.name}</td>
+                      <td className={styles.imgCell}>
+                        {component.name} <img src={imgSrc}></img>
+                      </td>
                       <td>{drop.location}</td>
                       <td>{drop.rarity}</td>
                       <td>{Math.ceil(drop.chance * 100)}%</td>

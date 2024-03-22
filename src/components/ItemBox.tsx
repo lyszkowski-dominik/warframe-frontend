@@ -79,14 +79,14 @@ const ItemBox = ({ data }: Props) => {
                             <CheckIcon
                               color="success"
                               sx={{
-                                fontSize: 60,
+                                fontSize: 40,
                               }}
                             />
                           ) : (
                             <ReportGmailerrorredIcon
                               color="error"
                               sx={{
-                                fontSize: 60,
+                                fontSize: 40,
                               }}
                             />
                           )
@@ -94,7 +94,7 @@ const ItemBox = ({ data }: Props) => {
                           <CheckIcon
                             color="success"
                             sx={{
-                              fontSize: 60,
+                              fontSize: 40,
                             }}
                           />
                         )}
@@ -134,14 +134,14 @@ const ItemBox = ({ data }: Props) => {
                             <CheckIcon
                               color="success"
                               sx={{
-                                fontSize: 60,
+                                fontSize: 40,
                               }}
                             />
                           ) : (
                             <ReportGmailerrorredIcon
                               color="error"
                               sx={{
-                                fontSize: 60,
+                                fontSize: 40,
                               }}
                             />
                           )
@@ -149,7 +149,7 @@ const ItemBox = ({ data }: Props) => {
                           <CheckIcon
                             color="success"
                             sx={{
-                              fontSize: 60,
+                              fontSize: 40,
                             }}
                           />
                         )}

@@ -74,6 +74,7 @@ const ItemBox = ({ data }: Props) => {
             <table className={styles.dropTable}>
               <thead>
                 <tr>
+                  <th>Component</th>
                   <th>Location</th>
                   <th>Rarity</th>
                   <th>Chance</th>
@@ -83,6 +84,7 @@ const ItemBox = ({ data }: Props) => {
                 return component.drops.map((drop) => (
                   <tbody key={uniqid()}>
                     <tr>
+                      <td>{component.name}</td>
                       <td>{drop.location}</td>
                       <td>{drop.rarity}</td>
                       <td>{Math.ceil(drop.chance * 100)}%</td>

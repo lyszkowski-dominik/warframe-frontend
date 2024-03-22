@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.searchBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.searchResult{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dataContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+

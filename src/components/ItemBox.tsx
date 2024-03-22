@@ -1,26 +1,27 @@
 import { Entry } from "../types/ItemBox";
 import styles from "./ItemBox.module.scss";
 import uniqid from "uniqid";
+import CheckIcon from "@mui/icons-material/Check";
+import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 
 type Props = {
   data: Entry;
 };
 
 const ItemBox = ({ data }: Props) => {
-  console.log(data);
-
   return (
     <div className={styles.container}>
-      <div className={styles.imageBox}>
+     
+      <div className={styles.itemBox}>
+        <h2>{data.name}</h2>
+        <p>{data.description}</p>
+        <div className={styles.table}>
+        <div className={styles.imageBox}>
         <img
           src={`https://cdn.warframestat.us/img/${data.imageName}`}
           alt={data.name}
         />
       </div>
-      <div className={styles.itemBox}>
-        <h2>{data.name}</h2>
-        <p>{data.description}</p>
-        <div className={styles.table}>
           <table>
             <thead>
               <tr>
@@ -56,6 +57,7 @@ const ItemBox = ({ data }: Props) => {
                 <tr>
                   <th>Component</th>
                   <th>Location</th>
+                  <th>Available</th>
                   <th>Rarity</th>
                   <th>Chance</th>
                 </tr>
@@ -64,8 +66,39 @@ const ItemBox = ({ data }: Props) => {
                 return component.drops.map((drop) => (
                   <tbody key={uniqid()}>
                     <tr>
-                      <td>{component.name}</td>
+                      <td className={styles.imgCell}>
+                        {component.name}{" "}
+                        <img
+                          src={`https://cdn.warframestat.us/img/${component.imageName}`}
+                        ></img>
+                      </td>
                       <td>{drop.location}</td>
+                      <td>
+                        {data.name.includes("Prime") ? (
+                          drop.available ? (
+                            <CheckIcon
+                              color="success"
+                              sx={{
+                                fontSize: 60,
+                              }}
+                            />
+                          ) : (
+                            <ReportGmailerrorredIcon
+                              color="error"
+                              sx={{
+                                fontSize: 60,
+                              }}
+                            />
+                          )
+                        ) : (
+                          <CheckIcon
+                            color="success"
+                            sx={{
+                              fontSize: 60,
+                            }}
+                          />
+                        )}
+                      </td>
                       <td>{drop.rarity}</td>
                       <td>{Math.ceil(drop.chance * 100)}%</td>
                     </tr>
@@ -81,6 +114,7 @@ const ItemBox = ({ data }: Props) => {
                 <tr>
                   <th>Component</th>
                   <th>Location</th>
+                  <th>Available</th>
                   <th>Rarity</th>
                   <th>Chance</th>
                 </tr>
@@ -94,6 +128,32 @@ const ItemBox = ({ data }: Props) => {
                         {component.name} <img src={imgSrc}></img>
                       </td>
                       <td>{drop.location}</td>
+                      <td>
+                      {data.name.includes("Prime") ? (
+                          drop.available ? (
+                            <CheckIcon
+                              color="success"
+                              sx={{
+                                fontSize: 60,
+                              }}
+                            />
+                          ) : (
+                            <ReportGmailerrorredIcon
+                              color="error"
+                              sx={{
+                                fontSize: 60,
+                              }}
+                            />
+                          )
+                        ) : (
+                          <CheckIcon
+                            color="success"
+                            sx={{
+                              fontSize: 60,
+                            }}
+                          />
+                        )}
+                      </td>
                       <td>{drop.rarity}</td>
                       <td>{Math.ceil(drop.chance * 100)}%</td>
                     </tr>

@@ -3,6 +3,7 @@ type Drop = {
   location: string;
   rarity: string;
   type: string;
+  available: boolean;
 };
 type Component = {
   description: string;

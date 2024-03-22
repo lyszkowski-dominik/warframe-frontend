@@ -44,7 +44,7 @@ const transformRelics = (uniqueRelics: any) => {
 
 export const fetchData = async () => {
   const response = await axios.get(
-    "https://api.warframestat.us/items?only=name,type,rewards,vaulted,locations,imageName,uniqueName?language=pl"
+    "https://api.warframestat.us/items?only=name,type,rewards,vaulted,locations,imageName,uniqueName?language=en"
   );
 
   // filter only for category relics

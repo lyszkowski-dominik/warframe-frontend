@@ -28,6 +28,12 @@ const transformRelics = (uniqueRelics: any) => {
       }
     });
   });
+  //filter off the attributes so that if reward.item.name === "Forma Blueprint" it will be removed
+  Object.keys(newObj).forEach((key) => {
+    if (key === "FormaBlueprint") {
+      delete newObj[key];
+    }
+  });
 
   // Convert the newObj into an array of objects
   const result = Object.values(newObj);

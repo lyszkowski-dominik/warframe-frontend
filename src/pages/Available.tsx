@@ -3,7 +3,12 @@ import GroupedTable from "../components/GroupedTable";
 import { Reward } from "../types/Reward";
 import ItemsTable from "../components/ItemsTable";
 import { fetchData } from "../utils/fetchData";
-import { browserName, browserVersion, deviceDetect, deviceType } from "react-device-detect";
+import {
+  browserName,
+  browserVersion,
+  deviceDetect,
+  deviceType,
+} from "react-device-detect";
 
 const Available = () => {
   const [currentlyAvailableRelics, setCurrentlyAvailableRelics] = useState([]);
@@ -23,20 +28,26 @@ const Available = () => {
     setIsFetching(false);
   }, []);
 
-  const test = deviceDetect(window.navigator.userAgent);
+  const {os, osName, osVersion} = deviceDetect(window.navigator.userAgent);
+
+  const browser = browserName + " " + browserVersion;
+
+  const osData = `${os !== undefined ? os : ""} ${
+    osName !== undefined ? osName : ""
+  } ${osVersion !== undefined ? osVersion : ""}`;
+  const deviceT = deviceType === "browser" ? "desktop" : deviceType;
 
   return (
     <div>
       <p>
-        BrowserName: {browserName}, BrowserVersion: {browserVersion}, Device
-        Type: {deviceType}
-
+        <b>Device:</b> {deviceT}
       </p>
-      {Object.keys(test).map((key) => (
-        <p>
-          {key}: {test[key]}
-        </p>
-      ))}
+      <p>
+        <b>Browser:</b> {browser}
+      </p>
+      <p>
+        <b>OS:</b> {osData}
+      </p>
       <h1>Warframe Relics</h1>
       <div className="card">
         {isFetching && <h1>Loading...</h1>}

@@ -3,7 +3,7 @@ import GroupedTable from "../components/GroupedTable";
 import { Reward } from "../types/Reward";
 import ItemsTable from "../components/ItemsTable";
 import { fetchData } from "../utils/fetchData";
-import {
+// import {
 //   browserName,
 //   browserVersion,
 //   deviceType,

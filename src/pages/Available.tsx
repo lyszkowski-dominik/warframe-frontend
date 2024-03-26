@@ -3,34 +3,11 @@ import GroupedTable from "../components/GroupedTable";
 import { Reward } from "../types/Reward";
 import ItemsTable from "../components/ItemsTable";
 import { fetchData } from "../utils/fetchData";
-// import {
-//   browserName,
-//   browserVersion,
-//   deviceType,
-//   isMobile,
-//   isTablet,
-//   isDesktop,
-// } from "react-device-detect";
 
 const Available = () => {
   const [currentlyAvailableRelics, setCurrentlyAvailableRelics] = useState([]);
   const [rewards, setRewards] = useState<Reward[]>([]);
   const [isFetching, setIsFetching] = useState(false);
-
-  // console.log(
-  //   "Browser name: ",
-  //   browserName,
-  //   "Browser version: ",
-  //   browserVersion,
-  //   "Device type: ",
-  //   deviceType,
-  //   "Is mobile: ",
-  //   isMobile,
-  //   "isTablet: ",
-  //   isTablet,
-  //   "isDesktop: ",
-  //   isDesktop
-  // );
 
   const getData = async () => {
     const data = await fetchData();

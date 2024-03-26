@@ -4,13 +4,13 @@ import { Reward } from "../types/Reward";
 import ItemsTable from "../components/ItemsTable";
 import { fetchData } from "../utils/fetchData";
 import {
-  browserName,
-  browserVersion,
-  deviceType,
-  isMobile,
-  isTablet,
-  isDesktop,
-} from "react-device-detect";
+//   browserName,
+//   browserVersion,
+//   deviceType,
+//   isMobile,
+//   isTablet,
+//   isDesktop,
+// } from "react-device-detect";
 
 const Available = () => {
   const [currentlyAvailableRelics, setCurrentlyAvailableRelics] = useState([]);
@@ -47,11 +47,11 @@ const Available = () => {
 
   return (
     <div>
-      <p>
+      {/* <p>
         BrowserName: {browserName}, BrowserVersion: {browserVersion}, Device
-        Type: {deviceType}
+        Type: {deviceType} 
         is mobile: {isMobile}, is tablet: {isTablet}, is desktop: {isDesktop}
-      </p>
+      </p> */}
       <h1>Warframe Relics</h1>
       <div className="card">
         {isFetching && <h1>Loading...</h1>}

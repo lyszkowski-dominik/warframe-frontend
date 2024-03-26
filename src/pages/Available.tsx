@@ -3,12 +3,6 @@ import GroupedTable from "../components/GroupedTable";
 import { Reward } from "../types/Reward";
 import ItemsTable from "../components/ItemsTable";
 import { fetchData } from "../utils/fetchData";
-// import {
-//   browserName,
-//   browserVersion,
-//   deviceDetect,
-//   deviceType,
-// } from "react-device-detect";
 
 const Available = () => {
   const [currentlyAvailableRelics, setCurrentlyAvailableRelics] = useState([]);
@@ -28,25 +22,8 @@ const Available = () => {
     setIsFetching(false);
   }, []);
 
-  // const {os, osName, osVersion} = deviceDetect(window.navigator.userAgent);
-
-  // const browser = browserName + " " + browserVersion;
-  // const osData = `${os !== undefined ? os : ""} ${
-  //   osName !== undefined ? osName : ""
-  // } ${osVersion !== undefined ? osVersion : ""}`;
-  // const deviceT = deviceType === "browser" ? "desktop" : deviceType;
-
   return (
     <div>
-      {/* <p>
-        <b>Device:</b> {deviceT}
-      </p>
-      <p>
-        <b>Browser:</b> {browser}
-      </p>
-      <p>
-        <b>OS:</b> {osData}
-      </p> */}
       <h1>Warframe Relics</h1>
       <div className="card">
         {isFetching && <h1>Loading...</h1>}
